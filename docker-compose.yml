@@ -20,6 +20,8 @@ services:
       - .env
     depends_on:
       - influxdb
+    ports:
+      - ${DOCKER_INFLUXDB_V1_INIT_PORT}:8186
 
   grafana:
     image: grafana/grafana-oss:8.4.3
